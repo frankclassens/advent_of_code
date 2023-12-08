@@ -1,0 +1,55 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Puzzle',
+    typeNamePlural: 'Puzzles'
+  }
+}
+
+annotate view ZFC_C_PUZ with
+{
+
+
+  @UI.facet: [ {
+    id: 'idIdentification',
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'Puzzle',
+    position: 10
+  } ]
+
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 10
+  } ]
+  PuzzleID;
+
+  @UI.lineItem: [ {
+    position: 11 ,
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 11
+  } ]
+  @UI.multiLineText: true
+  PuzzleInput;
+
+  @UI.lineItem: [ {
+    position: 12 ,
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 12
+  } ]
+  @UI.multiLineText: true
+  PuzzleResult;
+
+  @UI.lineItem: [
+  {  type: #FOR_ACTION, dataAction: 'Solve', label: 'Solve', position: 10 , importance: #MEDIUM } ]
+  @UI.identification: [
+  { type: #FOR_ACTION, dataAction: 'Solve', label: 'Solve', position: 10 } ]
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

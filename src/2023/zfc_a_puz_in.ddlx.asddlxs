@@ -1,0 +1,9 @@
+@Metadata.layer: #CORE
+annotate entity zfc_A_PUZ_IN
+    with 
+{
+    @EndUserText.label: 'Please provide your input'
+    @UI.multiLineText: true
+    puzzle_input;
+    
+}
